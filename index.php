@@ -36,7 +36,7 @@ include dirname(__FILE__) . '/axis.php';
 	$menu = [];
 	
 	foreach (explode(',',$versions) as $version) {
-		$menu[] = '<a href="' . $protocol . '://' . $version . '.' . $_SERVER['HTTP_HOST'] . '" target="_blank">' . $version . '</a>';
+		$menu[] = '<a href="' . str_replace('[version]',$version,$url) . '" target="_blank">' . $version . '</a>';
 	}
 	
 	echo '<div style="width:300px;margin:auto">' . implode(' &nbsp; ',$menu) . '</div>';

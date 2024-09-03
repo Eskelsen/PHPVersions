@@ -8,4 +8,6 @@ $versions = 'php52,php53,php54,php55,php56,php70,php71,php72,php73,php74,php80,p
 
 $protocol = empty($_SERVER['HTTPS']) ? 'http' : 'https';
 
-$file = dirname(__FILE__) . '/tests/index.php';
+$url = $protocol . '://[version].' . $_SERVER['HTTP_HOST']; # Configure
+
+$file = dirname(__FILE__) . '/tests/index.php'; # Configure
