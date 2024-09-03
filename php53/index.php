@@ -2,5 +2,7 @@
 
 # Index Versions
 
-// Change $_SERVER['HTTP_HOST']
-echo $_SERVER['HTTP_HOST'];
+echo '<title>PHP ' . phpversion() . '</title>';
+
+include dirname(dirname(__FILE__)) . '/axis.php';
+include $file;

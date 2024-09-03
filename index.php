@@ -2,7 +2,7 @@
 
 # Index PHP Versions
 
-include dirname(__FILE__) . '/config.php';
+include dirname(__FILE__) . '/axis.php';
 
 ?>
 <!doctype html>
@@ -32,11 +32,7 @@ include dirname(__FILE__) . '/config.php';
     <h1>PHP Versions</h1>
     <p>&nbsp;</p>
 	<?php
-	
-	$protocol = empty($_SERVER['HTTPS']) ? 'http' : 'https'; 
-	
-	$versions = 'php52,php53,php54,php55,php56,php70,php71,php72,php73,php74,php80,php81,php82,php83';
-	
+
 	$menu = [];
 	
 	foreach (explode(',',$versions) as $version) {
